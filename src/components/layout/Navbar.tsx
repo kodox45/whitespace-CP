@@ -29,14 +29,14 @@ export default function Navbar() {
           <Image
             src={exportedAssets.logos.blue.path}
             alt="Whitespace"
-            width={186}
-            height={22}
+            width={268}
+            height={31}
             priority
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-[40px] lg:flex">
+        <div className="hidden items-center gap-[24px] xl:flex min-[1440px]:gap-[35px]">
           {navigation.map((item, index) => (
             <div
               key={item.label}
@@ -46,7 +46,7 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className={`text-[20px] leading-normal transition-colors hover:text-primary-blue ${
+                className={`text-[16px] leading-[1.4] transition-colors hover:text-primary-blue min-[1440px]:text-[20px] ${
                   pathname.startsWith(item.href) && item.href !== "/"
                     ? "text-primary-blue"
                     : "text-dark"
@@ -77,19 +77,19 @@ export default function Navbar() {
           {/* Search Icon */}
           <Link
             href="/search"
-            className="ml-[8px] transition-opacity hover:opacity-70"
+            className="ml-[32px] transition-opacity hover:opacity-70 min-[1440px]:ml-[53px]"
             aria-label="Search"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="11" cy="11" r="7" stroke={colors.dark} strokeWidth="2" />
-              <path d="M16.5 16.5L21 21" stroke={colors.dark} strokeWidth="2" strokeLinecap="round" />
+              <circle cx="11" cy="11" r="7" stroke={colors.primaryBlue} strokeWidth="2" />
+              <path d="M16.5 16.5L21 21" stroke={colors.primaryBlue} strokeWidth="2" strokeLinecap="round" />
             </svg>
           </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="flex flex-col gap-[6px] lg:hidden"
+          className="flex flex-col gap-[6px] xl:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -99,9 +99,14 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Bottom border — Figma Line 1: x=243→1677, y=111.5, stroke #C8CCCC */}
+      <div className="mx-auto hidden max-w-[1920px] px-[20px] md:px-[40px] lg:px-[60px] xl:block xl:px-[120px] min-[1920px]:px-[243px]">
+        <div className="h-px bg-gray-dark" />
+      </div>
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray bg-white lg:hidden">
+        <div className="border-t border-gray bg-white xl:hidden">
           <div className="mx-auto max-w-[1920px] px-[20px] py-[24px] md:px-[40px]">
             {navigation.map((item, index) => (
               <div key={item.label} className="border-b border-gray last:border-0">

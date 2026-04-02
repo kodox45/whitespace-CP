@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb";
+import { layout } from "@/data/design-system";
 
 /* ─── DATA ─── */
 
@@ -55,9 +56,6 @@ const workSteps = [
   },
 ];
 
-/* ─── Reusable padding utility ─── */
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]";
-
 /* ─── PAGE ─── */
 
 export default function OurApproachPage() {
@@ -65,20 +63,22 @@ export default function OurApproachPage() {
     <>
       {/* ── INTRO SECTION ── */}
       <section className="bg-white pt-[112px]">
-        <div className={`mx-auto max-w-[1920px] pt-[32px] ${containerPx}`}>
-          {/* Breadcrumb */}
-          <Breadcrumb
-            items={[
-              { label: "Who We Are", href: "/about" },
-              { label: "Our Approach" },
-            ]}
-          />
+        <div className={`mx-auto max-w-[1920px] ${layout.containerPx}`}>
+          {/* Separator line — at section top, directly under navbar */}
+          <div className="h-[1px] bg-gray-dark" />
 
-          {/* Separator line */}
-          <div className="mt-[4px] h-[1px] bg-gray-dark" />
+          {/* Breadcrumb — 15px gap (31px target minus breadcrumb internal 16px py) */}
+          <div className="pt-[15px]">
+            <Breadcrumb
+              items={[
+                { label: "Who We Are", href: "/about" },
+                { label: "Our Approach" },
+              ]}
+            />
+          </div>
 
-          {/* 2-column: heading left, body right */}
-          <div className="mt-[24px] flex flex-col gap-[40px] pb-[60px] lg:flex-row lg:gap-[80px]">
+          {/* 2-column: heading left, body right — 54px below breadcrumb */}
+          <div className="mt-[22px] flex flex-col gap-[40px] pb-[93px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[254px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[463px] lg:shrink-0">
               <h1 className="text-[28px] font-bold leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
@@ -92,7 +92,7 @@ export default function OurApproachPage() {
 
             {/* Right column — Description + quote bar */}
             <div className="flex-1">
-              <p className="text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+              <p className="max-w-[717px] text-[16px] leading-[1.5] text-black xl:text-[20px]">
                 Our work is built on understanding the forces that shape how
                 brands behave, communicate, and create value.
                 <br />
@@ -107,8 +107,8 @@ export default function OurApproachPage() {
               </p>
 
               {/* Blue quote bar */}
-              <div className="mt-[40px] inline-block bg-primary-blue px-[16px] py-[8px]">
-                <p className="text-[16px] font-bold leading-[1] text-white md:text-[20px] xl:text-[24px]">
+              <div className="mt-[26px] inline-block bg-primary-blue px-[11px] py-[3px]">
+                <p className="text-[16px] leading-[1.4] text-white md:text-[20px] xl:text-[24px]">
                   A clear brand becomes a brand that moves.
                 </p>
               </div>
@@ -130,14 +130,14 @@ export default function OurApproachPage() {
 
       {/* ── A SYSTEM OF CLARITY ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+        <div className={`mx-auto max-w-[1920px] pt-[66px] pb-[80px] ${layout.containerPx}`}>
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[97px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[446px] lg:shrink-0">
               <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
                 A System of Clarity
               </h2>
-              <p className="mt-[24px] text-[20px] font-bold leading-[1.4] text-dark md:text-[24px] xl:text-[32px]">
+              <p className="mt-[16px] text-[20px] leading-[1.4] text-black md:text-[24px] xl:text-[32px]">
                 Behind every engagement is a set of proprietary clarity
                 principles that help us understand brands beyond visuals or
                 messaging.
@@ -152,10 +152,10 @@ export default function OurApproachPage() {
               <div className="flex flex-col gap-[24px]">
                 {clarityFrameworks.map((fw, index) => (
                   <div key={index}>
-                    <h3 className="text-[20px] font-bold leading-[1.3] text-dark">
+                    <h3 className="text-[20px] font-bold leading-[1.3] text-black">
                       {fw.title}
                     </h3>
-                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark/80 xl:text-[20px]">
+                    <p className="mt-[4px] text-[16px] leading-[1.5] text-black xl:text-[20px]">
                       {fw.description}
                     </p>
                   </div>
@@ -163,14 +163,14 @@ export default function OurApproachPage() {
               </div>
 
               {/* Blue quote bars */}
-              <div className="mt-[40px] flex flex-col gap-[8px]">
-                <div className="inline-block self-start bg-primary-blue px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1.2] text-white md:text-[20px] xl:text-[24px]">
+              <div className="mt-[40px] flex flex-col gap-[7px]">
+                <div className="inline-block self-start bg-primary-blue px-[11px] py-[3px]">
+                  <p className="text-[16px] leading-[1.5] text-white md:text-[20px] xl:text-[24px]">
                     These are not templates. They are ways of thinking&mdash;
                   </p>
                 </div>
-                <div className="inline-block self-start bg-primary-blue px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1.2] text-white md:text-[20px] xl:text-[24px]">
+                <div className="inline-block self-start bg-primary-blue px-[11px] py-[3px]">
+                  <p className="text-[16px] leading-[1.5] text-white md:text-[20px] xl:text-[24px]">
                     refined through real problems, real brands, and real
                     decisions.
                   </p>
@@ -183,12 +183,12 @@ export default function OurApproachPage() {
 
       {/* ── HOW WE SHAPE DIRECTION (Blue bg) ── */}
       <section className="bg-primary-blue">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[104px] pb-[80px] ${layout.containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             How We Shape Direction
           </h2>
 
-          <div className="mt-[40px] max-w-[1187px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
+          <div className="mt-[57px] max-w-[1187px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
             <p>
               We don&apos;t impose models.
               <br />
@@ -199,13 +199,13 @@ export default function OurApproachPage() {
             <p className="mt-[20px]">
               Direction emerges by aligning four things:
               <br />
-              &bull; What the brand means
+              <strong>&bull; What the brand means</strong>
               <br />
-              &bull; How people experience it
+              <strong>&bull; How people experience it</strong>
               <br />
-              &bull; Where the business needs to go
+              <strong>&bull; Where the business needs to go</strong>
               <br />
-              &bull; What the organization can deliver consistently
+              <strong>&bull; What the organization can deliver consistently</strong>
               <br />
               When these move together, brands stop drifting and start
               accelerating.
@@ -213,8 +213,8 @@ export default function OurApproachPage() {
           </div>
 
           {/* White quote bar */}
-          <div className="mt-[40px] inline-block bg-white px-[16px] py-[8px]">
-            <p className="text-[16px] font-bold leading-[1.2] text-primary-blue md:text-[20px] xl:text-[24px]">
+          <div className="mt-[48px] inline-block bg-white px-[11px] py-[3px]">
+            <p className="text-[16px] leading-[1.5] text-primary-blue md:text-[20px] xl:text-[24px]">
               We don&apos;t deliver outputs. We deliver clarity that guides
               outputs.
             </p>
@@ -224,14 +224,14 @@ export default function OurApproachPage() {
 
       {/* ── HOW WE WORK (Gray bg) ── */}
       <section className="bg-gray">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+        <div className={`mx-auto max-w-[1920px] pt-[82px] pb-[80px] ${layout.containerPx}`}>
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[128px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[415px] lg:shrink-0">
               <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
                 How We Work
               </h2>
-              <p className="mt-[24px] text-[20px] font-bold leading-[1.4] text-dark md:text-[24px] xl:text-[32px]">
+              <p className="mt-[16px] text-[20px] leading-[1.4] text-black md:text-[24px] xl:text-[32px]">
                 Every engagement follows a calm, intentional rhythm. Not a rigid
                 process&mdash;just a straightforward way of moving from
                 understanding to action.
@@ -243,10 +243,10 @@ export default function OurApproachPage() {
               <div className="flex flex-col gap-[24px]">
                 {workSteps.map((step) => (
                   <div key={step.number}>
-                    <h3 className="text-[20px] font-bold leading-[1.3] text-dark">
+                    <h3 className="text-[20px] font-bold leading-[1.3] text-black">
                       {step.number} {step.title}
                     </h3>
-                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark/80 xl:text-[20px]">
+                    <p className="mt-[4px] text-[16px] leading-[1.5] text-black xl:text-[20px]">
                       {step.description}
                     </p>
                   </div>
@@ -254,14 +254,14 @@ export default function OurApproachPage() {
               </div>
 
               {/* Dark quote bars */}
-              <div className="mt-[40px] flex flex-col gap-[8px]">
-                <div className="inline-block self-start bg-dark px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1.2] text-white md:text-[20px] xl:text-[24px]">
+              <div className="mt-[40px] flex flex-col gap-[7px]">
+                <div className="inline-block self-start bg-dark px-[11px] py-[3px]">
+                  <p className="text-[16px] leading-[1.5] text-white md:text-[20px] xl:text-[24px]">
                     Clarity isn&apos;t a phase.
                   </p>
                 </div>
-                <div className="inline-block self-start bg-dark px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1.2] text-white md:text-[20px] xl:text-[24px]">
+                <div className="inline-block self-start bg-dark px-[11px] py-[3px]">
+                  <p className="text-[16px] leading-[1.5] text-white md:text-[20px] xl:text-[24px]">
                     It&apos;s the foundation beneath every phase.
                   </p>
                 </div>
@@ -273,12 +273,12 @@ export default function OurApproachPage() {
 
       {/* ── HOW WE COLLABORATE ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[100px] pb-[80px] ${layout.containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             How We Collaborate
           </h2>
 
-          <div className="mt-[40px] max-w-[1187px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+          <div className="mt-[57px] max-w-[1187px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
             <p>
               We work closely with founders, leaders, and teams&mdash;helping
               them navigate complexity with clarity and confidence.
@@ -291,8 +291,8 @@ export default function OurApproachPage() {
           </div>
 
           {/* Blue quote bar */}
-          <div className="mt-[40px] inline-block bg-primary-blue px-[16px] py-[8px]">
-            <p className="text-[16px] font-bold leading-[1.2] text-white md:text-[20px] xl:text-[24px]">
+          <div className="mt-[44px] inline-block bg-primary-blue px-[11px] py-[3px]">
+            <p className="text-[16px] leading-[1.5] text-white md:text-[20px] xl:text-[24px]">
               Clarity isn&apos;t our service. It&apos;s our approach to
               everything.
             </p>

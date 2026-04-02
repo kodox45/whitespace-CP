@@ -64,8 +64,8 @@ const differentiators = [
   },
 ];
 
-/* ─── Reusable padding utility ─── */
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]";
+/* ─── Reusable padding utility (matches design-system.ts) ─── */
+const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]";
 
 /* ─── PAGE ─── */
 
@@ -74,7 +74,7 @@ export default function AboutPage() {
     <>
       {/* ── INTRO SECTION ── */}
       <section className="bg-white pt-[112px]">
-        <div className={`mx-auto max-w-[1920px] pt-[32px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[16px] ${containerPx}`}>
           {/* Breadcrumb */}
           <Breadcrumb
             items={[
@@ -84,10 +84,10 @@ export default function AboutPage() {
           />
 
           {/* 2-column: heading left, body right */}
-          <div className="mt-[24px] flex flex-col gap-[40px] pb-[60px] lg:flex-row lg:gap-[80px]">
+          <div className="mt-[38px] flex flex-col gap-[40px] pb-[65px] lg:flex-row lg:gap-[80px] min-[1920px]:gap-[188px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[531px] lg:shrink-0">
-              <h1 className="text-[28px] font-bold leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
+              <h1 className="text-[28px] font-normal leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
                 We are a strategic
                 <br />
                 brand consultancy
@@ -113,8 +113,8 @@ export default function AboutPage() {
               </p>
 
               {/* Blue quote bar */}
-              <div className="mt-[40px] inline-block bg-primary-blue px-[16px] py-[8px]">
-                <p className="text-[16px] font-bold leading-[1] text-white md:text-[20px] xl:text-[24px]">
+              <div className="mt-[28px] inline-block bg-primary-blue px-[11px] py-[3px]">
+                <p className="text-[16px] font-normal leading-[1.4] text-white md:text-[20px] xl:text-[24px]">
                   A clear brand becomes a brand that moves.
                 </p>
               </div>
@@ -136,14 +136,14 @@ export default function AboutPage() {
 
       {/* ── OUR STORY ── */}
       <section className="relative overflow-hidden bg-primary-blue">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[124px] ${containerPx}`}>
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[89px]">
             {/* Left column — Heading + icon */}
-            <div className="lg:w-[300px] lg:shrink-0">
-              <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
+            <div className="lg:w-[215px] lg:shrink-0">
+              <h2 className="text-[28px] font-normal leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
                 Our Story
               </h2>
-              <div className="mt-[40px] hidden lg:block">
+              <div className="mt-[62px] hidden lg:block">
                 <Image
                   src="/images/about-story-icon.svg"
                   alt=""
@@ -155,7 +155,7 @@ export default function AboutPage() {
 
             {/* Right column — Story text + quote bars */}
             <div className="flex-1">
-              <div className="text-[16px] leading-[1.5] text-white/90 xl:text-[20px]">
+              <div className="text-[16px] leading-[1.5] text-white xl:text-[20px]">
                 <p>
                   Whitespace began in 1999 as a creative boutique with a deep
                   focus on brand-led design. From the beginning, visual systems
@@ -193,15 +193,15 @@ export default function AboutPage() {
               </div>
 
               {/* White quote bars */}
-              <div className="mt-[40px] flex flex-col gap-[8px]">
+              <div className="mt-[52px] flex flex-col gap-[7px]">
                 <div className="inline-block self-start bg-white px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1] text-primary-blue md:text-[20px] xl:text-[24px]">
+                  <p className="text-[16px] font-normal leading-[1] text-primary-blue md:text-[20px] xl:text-[24px]">
                     A journey shaped by practice, reflection, and
                     responsibility&mdash;
                   </p>
                 </div>
                 <div className="inline-block self-start bg-white px-[16px] py-[8px]">
-                  <p className="text-[16px] font-bold leading-[1] text-primary-blue md:text-[20px] xl:text-[24px]">
+                  <p className="text-[16px] font-normal leading-[1] text-primary-blue md:text-[20px] xl:text-[24px]">
                     carried into every piece of work we do.
                   </p>
                 </div>
@@ -213,11 +213,11 @@ export default function AboutPage() {
 
       {/* ── WHAT DRIVES US ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[88px] ${containerPx}`}>
+          <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             What Drives Us
           </h2>
-          <div className="mt-[40px] max-w-[995px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+          <div className="mt-[22px] max-w-[995px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
             <p>
               Whitespace began with a simple belief:
               <br />
@@ -267,14 +267,14 @@ export default function AboutPage() {
           sizes="100vw"
         />
         {/* Text overlaid on the gray left portion */}
-        <div className={`relative z-10 mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+        <div className={`relative z-10 mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[100px] ${containerPx}`}>
           <div className="max-w-[580px]">
-            <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+            <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
               Clarity that Moves
               <br />
               Brands Forward.
             </h2>
-            <p className="mt-[24px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+            <p className="mt-[54px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
               It&apos;s not just what we deliver&mdash;it&apos;s how we
               think, how we work, and how we turn complexity into direction.
             </p>
@@ -284,14 +284,15 @@ export default function AboutPage() {
 
       {/* ── WHAT MAKES US DIFFERENT ── */}
       <section className="bg-dark">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
-            {/* Left — Heading + subtitle */}
+        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[125px] ${containerPx}`}>
+          <h2 className="text-[28px] font-normal leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
+            What Makes Us Different
+          </h2>
+
+          <div className="mt-[40px] flex flex-col gap-[40px] lg:mt-[59px] lg:flex-row lg:gap-[75px]">
+            {/* Left — subtitle */}
             <div className="lg:w-[469px] lg:shrink-0">
-              <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
-                What Makes Us Different
-              </h2>
-              <p className="mt-[24px] text-[20px] font-bold leading-[1.4] text-white md:text-[24px] xl:text-[32px]">
+              <p className="text-[20px] font-normal leading-[1.4] text-white md:text-[24px] xl:text-[32px]">
                 We don&apos;t try to be everything. We focus on what actually
                 moves brands: clarity, alignment, and strategic consistency.
               </p>
@@ -305,7 +306,7 @@ export default function AboutPage() {
                     <h3 className="text-[20px] font-bold leading-[1.3] text-white">
                       {item.title}
                     </h3>
-                    <p className="mt-[8px] text-[16px] leading-[1.5] text-white/80 xl:text-[20px]">
+                    <p className="mt-[8px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
                       {item.description}
                     </p>
                   </div>
@@ -318,15 +319,15 @@ export default function AboutPage() {
 
       {/* ── LEADERSHIP ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[120px] ${containerPx}`}>
+          <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Leadership
           </h2>
 
-          <div className="mt-[60px] flex flex-col">
+          <div className="mt-[80px] min-[1920px]:mt-[115px] flex flex-col">
             {teamMembers.map((member, index) => (
               <div key={member.name}>
-                <div className="flex flex-col gap-[32px] py-[40px] md:flex-row md:gap-[60px] xl:gap-[80px]">
+                <div className="flex flex-col gap-[32px] py-[40px] md:flex-row md:gap-[60px] xl:gap-[82px]">
                   {/* Photo — no rounded corners per Figma */}
                   <div className="relative h-[350px] w-full shrink-0 overflow-hidden md:h-[454px] md:w-[466px]">
                     <Image
@@ -358,14 +359,14 @@ export default function AboutPage() {
                     <div className="mt-[32px] flex flex-wrap items-center gap-[24px]">
                       <Link
                         href={member.linkedin}
-                        className="flex items-center gap-[8px] text-[16px] text-dark/60 transition-colors hover:text-primary-blue xl:text-[20px]"
+                        className="flex items-center gap-[8px] text-[16px] text-dark transition-colors hover:text-primary-blue xl:text-[20px]"
                       >
                         <Image
                           src="/images/icon-linkedin.svg"
                           alt=""
-                          width={24}
-                          height={24}
-                          className="h-auto w-[24px] opacity-60"
+                          width={35}
+                          height={35}
+                          className="h-auto w-[35px]"
                         />
                         Follow and connect on LinkedIn
                       </Link>
@@ -380,7 +381,7 @@ export default function AboutPage() {
                 </div>
                 {/* Separator line between team members */}
                 {index < teamMembers.length - 1 && (
-                  <div className="h-[1px] bg-gray-dark/40" />
+                  <div className="h-[1px] bg-gray-dark" />
                 )}
               </div>
             ))}
@@ -390,7 +391,9 @@ export default function AboutPage() {
 
       {/* ── CTA BANNER ── */}
       <section className="bg-white">
-        <CTABanner />
+        <div className="mx-auto max-w-[1920px]">
+          <CTABanner />
+        </div>
       </section>
     </>
   );

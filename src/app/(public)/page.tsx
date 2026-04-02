@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { layout } from "@/data/design-system";
+import CTABanner from "@/components/layout/CTABanner";
 
 /* ─── DATA ─── */
 
@@ -33,6 +35,11 @@ const clientTypes = [
       "Organizations requiring brand–business consolidation and strategic clarity across units and stakeholders.",
   },
   {
+    title: "Mid-sized &\nGrowth-Stage\nCompanies",
+    description:
+      "Businesses are scaling fast and need a strategic foundation to keep growth aligned.",
+  },
+  {
     title: "Founders &\nOwnership Groups",
     description:
       "Leaders seeking long-term clarity and a brand foundation that supports decisive growth.",
@@ -41,11 +48,6 @@ const clientTypes = [
     title: "Strategic\nPartners",
     description:
       "PR, digital, and communication firms are seeking a strategic partner to enhance their value to clients.",
-  },
-  {
-    title: "Mid-sized &\nGrowth-Stage\nCompanies",
-    description:
-      "Businesses are scaling fast and need a strategic foundation to keep growth aligned.",
   },
 ];
 
@@ -82,28 +84,28 @@ const frameworksRight = [
 
 const selectedWorks = [
   {
-    image: "/images/work-blog.png",
+    image: "/images/work-blog-color.png",
     title: "Brand Architecture & Business Alignment",
     description:
       "We structured a comprehensive brand architecture based on segmentation logic and value proposition alignment, preparing B-Log for a transition to a fully integrated 4PL model.",
     slug: "b-log",
   },
   {
-    image: "/images/work-kitabisa.png",
+    image: "/images/work-kitabisa-color.png",
     title: "Strategic Brand Clarification",
     description:
       "We restructured Kitabisa's brand strategy through clarity-driven meaning logic, audience segmentation, and narrative alignment to reinforce relevance within an evolving social and cultural landscape.",
     slug: "kitabisa",
   },
   {
-    image: "/images/work-salingjaga.png",
+    image: "/images/work-salingjaga-color.png",
     title: "Brand Narrative & Positioning",
     description:
       "We articulated a straightforward and trust-centered narrative, repositioning SalingJaga with a clarity-based approach that refined its value perception and message-to-market alignment.",
     slug: "salingjaga",
   },
   {
-    image: "/images/work-bibet.png",
+    image: "/images/work-bibet-color.png",
     title: "Brand Foundation & Expression System",
     description:
       "We developed the brand foundation, positioning, and expression ecosystem—rooted in clarity, logic, and cultural insight—to redefine taste, social meaning, and modern local relevance.",
@@ -112,7 +114,7 @@ const selectedWorks = [
 ];
 
 /* ─── Reusable padding utility ─── */
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]";
+const containerPx = layout.containerPx;
 
 /* ─── ARROW ICON ─── */
 function ArrowRight({ className = "" }: { className?: string }) {
@@ -131,9 +133,9 @@ export default function HomePage() {
     <>
       {/* ── HERO: White area with heading ── */}
       <section className="bg-white pt-[112px]">
-        <div className={`mx-auto max-w-[1920px] py-[60px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[40px] pb-[40px] xl:pt-[69px] xl:pb-[51px] ${containerPx}`}>
           <div className="flex items-start justify-between">
-            <h1 className="text-[40px] font-bold leading-[1.05] text-primary-blue md:text-[56px] lg:text-[72px] xl:text-[100px]">
+            <h1 className="text-[40px] leading-[1.2] text-primary-blue md:text-[56px] lg:text-[72px] xl:text-[100px]">
               Where Clarity
               <br />
               Becomes Momentum.
@@ -150,7 +152,7 @@ export default function HomePage() {
       <section className="relative h-[400px] w-full overflow-hidden md:h-[500px] xl:h-[720px]">
         <Image src="/images/hero-bg.png" alt="" fill className="object-cover" priority />
         <div className="absolute inset-0 flex items-start justify-end">
-          <div className={`mx-auto w-full max-w-[1920px] pt-[60px] md:pt-[100px] ${containerPx}`}>
+          <div className={`mx-auto w-full max-w-[1920px] pt-[60px] md:pt-[80px] xl:pt-[104px] ${containerPx}`}>
             <div className="max-w-full md:ml-auto md:max-w-[500px] xl:max-w-[574px]">
               <p className="text-[18px] leading-[1.5] text-white md:text-[22px] xl:text-[30px]">
                 We help companies make better brand decisions through strategic
@@ -159,10 +161,9 @@ export default function HomePage() {
               </p>
               <Link
                 href="/services"
-                className="mt-[40px] inline-flex items-center gap-[12px] rounded-full bg-white px-[24px] py-[10px] text-[20px] font-bold text-primary-blue transition-opacity hover:opacity-90"
+                className="mt-[20px] inline-flex h-[45px] items-center justify-center rounded-[8px] bg-white px-[19px] text-[16px] font-bold text-primary-blue transition-colors duration-300 hover:bg-primary-blue hover:text-white md:text-[18px] xl:text-[20px]"
               >
                 Read More
-                <ArrowRight className="text-primary-blue" />
               </Link>
             </div>
           </div>
@@ -172,7 +173,7 @@ export default function HomePage() {
       {/* ── WHAT WE DO ── */}
       <section className="bg-white">
         <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             What We Do
           </h2>
 
@@ -184,10 +185,10 @@ export default function HomePage() {
                 {index > 0 && (
                   <div className="absolute -left-[40px] top-[8px] hidden h-[calc(100%-16px)] w-[1px] bg-gray-dark/60 xl:block" />
                 )}
-                <h3 className="whitespace-pre-line text-[24px] font-bold leading-[1.15] text-primary-blue xl:text-[32px]">
+                <h3 className="whitespace-pre-line text-[24px] leading-[1.15] text-primary-blue xl:text-[32px]">
                   {service.title}
                 </h3>
-                <p className="mt-[24px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+                <p className="mt-[26px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
                   {service.description}
                 </p>
               </div>
@@ -200,11 +201,11 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gray">
         <div className="flex min-h-[734px] flex-col lg:flex-row">
           {/* Left: Text content */}
-          <div className={`flex-1 py-[80px] ${containerPx} lg:pr-[60px]`}>
-            <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <div className={`flex-1 pt-[80px] pb-[80px] xl:pt-[111px] ${containerPx} lg:pr-[60px] min-[1920px]:pr-[60px]`}>
+            <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
               Why Clarity Matters
             </h2>
-            <div className="mt-[40px] max-w-[730px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+            <div className="mt-[53px] max-w-[730px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
               <p>
                 Brands grow when meaning, perception, and value move in the same direction.
               </p>
@@ -224,8 +225,8 @@ export default function HomePage() {
               </p>
             </div>
             {/* Blue quote bar */}
-            <div className="mt-[40px] inline-block bg-primary-blue px-[16px] py-[14px]">
-              <p className="text-[18px] font-bold leading-[1] text-white md:text-[24px] xl:text-[32px]">
+            <div className="mt-[40px] inline-block bg-primary-blue px-[13px] pt-[14px] pb-[18px]">
+              <p className="text-[18px] leading-[1] text-white md:text-[24px] xl:text-[32px]">
                 A clear brand becomes a brand that moves.
               </p>
             </div>
@@ -245,9 +246,14 @@ export default function HomePage() {
       </section>
 
       {/* ── WHO WE WORK WITH ── */}
-      <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+      <section className="relative bg-white">
+        {/* Blue gradient that rises behind the bottom portion of the cards — matches Figma overlap at y=2859 */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[260px]"
+          style={{ background: "linear-gradient(to right, #0ca6eb, #345aee)" }}
+        />
+        <div className={`relative z-10 mx-auto max-w-[1920px] pt-[80px] pb-[40px] ${containerPx}`}>
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Who We Work With
           </h2>
           <div className="mt-[60px] grid grid-cols-1 gap-[16px] md:grid-cols-2 xl:grid-cols-4 xl:gap-[12px]">
@@ -256,10 +262,10 @@ export default function HomePage() {
                 key={index}
                 className="rounded-[16px] bg-dark px-[32px] py-[40px] xl:px-[56px] xl:py-[60px]"
               >
-                <h3 className="whitespace-pre-line text-[24px] font-bold leading-[1.15] text-white xl:text-[32px]">
+                <h3 className="whitespace-pre-line text-[24px] leading-[1.15] text-white xl:text-[32px]">
                   {client.title}
                 </h3>
-                <p className="mt-[24px] text-[16px] leading-[1.5] text-white/80 xl:text-[20px]">
+                <p className="mt-[26px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
                   {client.description}
                 </p>
               </div>
@@ -269,9 +275,9 @@ export default function HomePage() {
       </section>
 
       {/* ── OUR FRAMEWORKS ── */}
-      <section className="bg-dark">
+      <section style={{ background: "linear-gradient(to right, #0ca6eb, #345aee)" }}>
         <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             Our Frameworks
           </h2>
 
@@ -290,7 +296,7 @@ export default function HomePage() {
               {frameworksLeft.map((fw, i) => (
                 <div key={i}>
                   <h3 className="text-[20px] font-bold leading-[1.3] text-white">{fw.name}</h3>
-                  <p className="mt-[8px] text-[16px] leading-[1.5] text-white/70 xl:text-[20px]">
+                  <p className="mt-[8px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
                     {fw.description}
                   </p>
                 </div>
@@ -302,7 +308,7 @@ export default function HomePage() {
               {frameworksRight.map((fw, i) => (
                 <div key={i}>
                   <h3 className="text-[20px] font-bold leading-[1.3] text-white">{fw.name}</h3>
-                  <p className="mt-[8px] text-[16px] leading-[1.5] text-white/70 xl:text-[20px]">
+                  <p className="mt-[8px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
                     {fw.description}
                   </p>
                 </div>
@@ -315,30 +321,35 @@ export default function HomePage() {
       {/* ── SELECTED TRANSFORMATIONS ── */}
       <section className="bg-gray">
         <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Selected Transformations
           </h2>
 
           {/* 2x2 grid of portfolio cards */}
-          <div className="mt-[60px] grid grid-cols-1 gap-x-[40px] gap-y-[50px] md:grid-cols-2">
+          <div className="mt-[60px] grid grid-cols-1 gap-x-[20px] gap-y-[53px] md:grid-cols-2 xl:gap-x-[22px]">
             {selectedWorks.map((work) => (
               <Link key={work.slug} href={`/works/${work.slug}`} className="group block">
-                {/* Card image — aspect matches Figma image area (830×330) */}
-                <div className="relative aspect-[83/33] overflow-hidden rounded-[16px]">
+                {/* Card image — grayscale by default, color on hover */}
+                <div className="relative aspect-[707/330] overflow-hidden rounded-[16px]">
                   <Image
                     src={work.image}
                     alt={work.title}
                     fill
-                    className="object-cover object-[center_top] transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
+                  {/* Dark overlay — fades on hover */}
+                  <div className="absolute inset-0 bg-dark/40 transition-opacity duration-500 group-hover:opacity-0" />
                 </div>
                 {/* Card text */}
-                <div className="mt-[28px]">
-                  <h3 className="text-[24px] font-bold leading-[1.3] text-dark">{work.title}</h3>
-                  <p className="mt-[4px] text-[16px] leading-[1.5] text-dark/80 xl:text-[20px]">
-                    {work.description}
-                  </p>
+                <div className="mt-[28px] flex items-end justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-[24px] font-bold leading-[1.3] text-dark transition-colors duration-300 group-hover:text-primary-blue">{work.title}</h3>
+                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
+                      {work.description}
+                    </p>
+                  </div>
+                  <ArrowRight className="mb-[4px] ml-[16px] shrink-0 text-dark transition-colors duration-300 group-hover:text-primary-blue" />
                 </div>
               </Link>
             ))}
@@ -348,24 +359,18 @@ export default function HomePage() {
           <div className="mt-[60px] flex justify-end">
             <Link
               href="/works"
-              className="inline-flex items-center gap-[12px] rounded-full bg-primary-blue px-[24px] py-[10px] text-[20px] font-bold text-white transition-opacity hover:opacity-90"
+              className="inline-flex h-[45px] items-center justify-center rounded-[8px] bg-primary-blue px-[38px] text-[16px] text-white transition-colors duration-300 hover:bg-gray-dark hover:text-primary-blue md:text-[18px] xl:text-[20px]"
             >
               View All
-              <ArrowRight className="text-white" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className={`bg-gray pb-[80px] ${containerPx}`}>
-        <div className="mx-auto max-w-[1440px] rounded-[16px] bg-primary-blue px-[40px] py-[60px] text-center">
-          <h2 className="text-[32px] font-bold leading-[1.1] text-white md:text-[48px] xl:text-[64px]">
-            Start with Clarity
-          </h2>
-          <p className="mt-[16px] text-[18px] leading-[1.4] text-white md:text-[24px] xl:text-[36px]">
-            Let&apos;s talk about the direction your brand deserves!
-          </p>
+      <section className="bg-gray">
+        <div className="mx-auto max-w-[1920px]">
+          <CTABanner />
         </div>
       </section>
     </>

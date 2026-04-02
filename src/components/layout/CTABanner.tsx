@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { typography, patterns } from "@/data/design-system";
 
 interface CTABannerProps {
   heading?: string;
@@ -13,16 +12,18 @@ export default function CTABanner({
   href = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="px-[20px] pb-[80px] md:px-[40px] lg:px-[60px] xl:px-[120px]">
+    <div className="px-[20px] pb-[80px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]">
       <Link
         href={href}
-        className={`${patterns.ctaBanner} block transition-opacity hover:opacity-95`}
+        className="group flex w-full flex-col items-center justify-center rounded-[16px] bg-primary-blue px-[20px] py-[40px] text-center transition-colors duration-300 hover:bg-gray-dark md:px-[40px] xl:py-[60px]"
       >
-        <h2 className={typography.ctaHeading.responsive}>{heading}</h2>
-        <p className={`mt-[16px] ${typography.ctaSubtitle.responsive}`}>
+        <h2 className="text-[32px] leading-[1.1] text-white transition-colors duration-300 group-hover:text-primary-blue md:text-[48px] xl:text-[64px]">
+          {heading}
+        </h2>
+        <p className="mt-[16px] text-[18px] leading-[1.4] text-white transition-colors duration-300 group-hover:text-primary-blue md:text-[24px] xl:text-[36px]">
           {subtitle}
         </p>
       </Link>
-    </section>
+    </div>
   );
 }

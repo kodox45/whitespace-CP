@@ -63,39 +63,39 @@ export const typography = {
   /** Hero heading — Homepage only */
   heroHeading: {
     fontSize: 100,
-    fontWeight: "bold" as const,
-    lineHeight: 1.05,
+    fontWeight: "normal" as const,
+    lineHeight: 1.2,
     color: colors.primaryBlue,
     /** Responsive: 40 → 56 → 72 → 100 */
-    responsive: "text-[40px] font-bold leading-[1.05] text-primary-blue md:text-[56px] lg:text-[72px] xl:text-[100px]",
+    responsive: "text-[40px] leading-[1.2] text-primary-blue md:text-[56px] lg:text-[72px] xl:text-[100px]",
   },
   /** Section headings (What We Do, Why Clarity Matters, etc.) */
   sectionHeading: {
     fontSize: 48,
-    fontWeight: "bold" as const,
+    fontWeight: "normal" as const,
     lineHeight: 1.15,
     color: { light: colors.dark, dark: colors.white },
     /** Responsive: 28 → 36 → 48 */
-    responsiveLight: "text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]",
-    responsiveDark: "text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]",
+    responsiveLight: "text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]",
+    responsiveDark: "text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]",
   },
   /** Sub-headings (service titles, card titles, client type names) */
   subHeading: {
     fontSize: 32,
-    fontWeight: "bold" as const,
+    fontWeight: "normal" as const,
     lineHeight: 1.15,
     color: { blue: colors.primaryBlue, dark: colors.dark, white: colors.white },
-    responsiveBlue: "text-[24px] font-bold leading-[1.15] text-primary-blue xl:text-[32px]",
-    responsiveDark: "text-[24px] font-bold leading-[1.15] text-dark xl:text-[32px]",
-    responsiveWhite: "text-[24px] font-bold leading-[1.15] text-white xl:text-[32px]",
+    responsiveBlue: "text-[24px] leading-[1.15] text-primary-blue xl:text-[32px]",
+    responsiveDark: "text-[24px] leading-[1.15] text-dark xl:text-[32px]",
+    responsiveWhite: "text-[24px] leading-[1.15] text-white xl:text-[32px]",
   },
   /** Quote / tagline strips */
   quote: {
     fontSize: 32,
-    fontWeight: "bold" as const,
+    fontWeight: "normal" as const,
     lineHeight: 1,
     color: colors.white,
-    responsive: "text-[18px] font-bold leading-[1] text-white md:text-[24px] xl:text-[32px]",
+    responsive: "text-[18px] leading-[1] text-white md:text-[24px] xl:text-[32px]",
   },
   /** Framework subtitle / larger descriptive text */
   subtitle: {
@@ -111,22 +111,22 @@ export const typography = {
     color: { dark: colors.dark, white: colors.white, muted: `${colors.white}CC` },
     responsiveDark: "text-[16px] leading-[1.5] text-dark xl:text-[20px]",
     responsiveWhite: "text-[16px] leading-[1.5] text-white xl:text-[20px]",
-    responsiveMuted: "text-[16px] leading-[1.5] text-white/80 xl:text-[20px]",
+    responsiveMuted: "text-[16px] leading-[1.5] text-white xl:text-[20px]",
   },
   /** Navigation items */
   nav: {
     fontSize: 20,
-    lineHeight: "normal" as const,
+    lineHeight: 1.4,
     color: colors.dark,
-    className: "text-[20px] leading-normal text-dark",
+    className: "text-[20px] leading-[1.4] text-dark",
   },
   /** CTA heading */
   ctaHeading: {
     fontSize: 64,
-    fontWeight: "bold" as const,
+    fontWeight: "normal" as const,
     lineHeight: 1.1,
     color: colors.white,
-    responsive: "text-[32px] font-bold leading-[1.1] text-white md:text-[48px] xl:text-[64px]",
+    responsive: "text-[32px] leading-[1.1] text-white md:text-[48px] xl:text-[64px]",
   },
   /** CTA subtitle */
   ctaSubtitle: {
@@ -180,9 +180,10 @@ export const layout = {
     tablet: 40,   // md (768px+)
     laptop: 60,   // lg (1024px+)
     desktop: 120, // xl (1280px+)
+    wide: 243,    // min-[1920px] — exact Figma measurement
   },
   /** Tailwind responsive padding utility */
-  containerPx: "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]",
+  containerPx: "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
 
   /** Navbar */
   navbar: {
@@ -191,14 +192,14 @@ export const layout = {
     /** Outer nav element */
     className: "fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm",
     /** Inner container — use directly, no interpolation needed */
-    innerClassName: "mx-auto flex h-[112px] max-w-[1920px] items-center justify-between px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]",
+    innerClassName: "mx-auto flex h-[112px] max-w-[1920px] items-center justify-between px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
   },
 
   /** Section vertical padding */
   sectionPy: "py-[80px]",
 
   /** Standard section wrapper — max width + padding */
-  sectionContainer: "mx-auto max-w-[1920px] py-[80px] px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]",
+  sectionContainer: "mx-auto max-w-[1920px] py-[80px] px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
 
   /** Border radius tokens */
   radius: {
@@ -307,11 +308,11 @@ export const footer = {
     { label: "Terms of Use", href: "#" },
   ],
   socialLinks: [
+    { label: "WhatsApp", icon: "/images/social-whatsapp.svg", href: "#" },
     { label: "LinkedIn", icon: "/images/social-linkedin.svg", href: "#" },
-    { label: "Instagram", icon: "/images/social-instagram.svg", href: "#" },
-    { label: "Twitter", icon: "/images/social-twitter.svg", href: "#" },
     { label: "Facebook", icon: "/images/social-facebook.svg", href: "#" },
-    { label: "YouTube", icon: "/images/social-youtube.svg", href: "#" },
+    { label: "Twitter", icon: "/images/social-twitter.svg", href: "#" },
+    { label: "Instagram", icon: "/images/social-instagram.svg", href: "#" },
   ],
   address: {
     company: "PT Ruang Putih Kreasi",
@@ -370,11 +371,11 @@ export const exportedAssets = {
     mark:        { path: "/images/whitespace-mark.svg",figmaNode: "195:449", note: "Square W mark icon" },
   },
   social: {
-    linkedin:  { path: "/images/social-linkedin.svg",  figmaNode: "120:495" },
-    instagram: { path: "/images/social-instagram.svg", figmaNode: "120:500" },
-    twitter:   { path: "/images/social-twitter.svg",   figmaNode: "120:503" },
-    facebook:  { path: "/images/social-facebook.svg",  figmaNode: "120:506" },
-    youtube:   { path: "/images/social-youtube.svg",   figmaNode: "120:509" },
+    whatsapp:  { path: "/images/social-whatsapp.svg",  figmaNode: "120:495" },
+    linkedin:  { path: "/images/social-linkedin.svg",  figmaNode: "120:500" },
+    facebook:  { path: "/images/social-facebook.svg",  figmaNode: "120:503" },
+    twitter:   { path: "/images/social-twitter.svg",   figmaNode: "120:506" },
+    instagram: { path: "/images/social-instagram.svg", figmaNode: "120:509" },
   },
   homepage: {
     heroBg:           { path: "/images/hero-bg.png",          figmaNode: "120:358", note: "Dark bg with blue W pattern vectors" },

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb";
+import { layout } from "@/data/design-system";
 
 /* ─── DATA ─── */
 
@@ -87,7 +88,7 @@ const partnerRoles = [
 ];
 
 /* ─── Reusable padding utility ─── */
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px]";
+const containerPx = layout.containerPx;
 
 /* ─── PAGE ─── */
 
@@ -96,20 +97,22 @@ export default function EcosystemPage() {
     <>
       {/* ── INTRO SECTION ── */}
       <section className="bg-white pt-[112px]">
-        <div className={`mx-auto max-w-[1920px] pt-[32px] ${containerPx}`}>
-          {/* Breadcrumb */}
-          <Breadcrumb
-            items={[
-              { label: "Who We Are", href: "/about" },
-              { label: "Ecosystem" },
-            ]}
-          />
+        <div className={`mx-auto max-w-[1920px] ${containerPx}`}>
+          {/* Separator line — right at navbar bottom (Figma y:111.5) */}
+          <div className="h-[1px] bg-gray-dark" />
 
-          {/* Separator line */}
-          <div className="mt-[4px] h-[1px] bg-gray-dark" />
+          {/* Breadcrumb — 31px below line (Figma y:143) */}
+          <div className="pt-[31px]">
+            <Breadcrumb
+              items={[
+                { label: "Who We Are", href: "/about" },
+                { label: "Ecosystem" },
+              ]}
+            />
+          </div>
 
           {/* 2-column: heading left, body right */}
-          <div className="mt-[24px] flex flex-col gap-[40px] pb-[60px] lg:flex-row lg:gap-[80px]">
+          <div className="mt-[24px] flex flex-col gap-[40px] pb-[63px] lg:flex-row lg:gap-[80px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[507px] lg:shrink-0">
               <h1 className="text-[28px] font-bold leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
@@ -134,8 +137,8 @@ export default function EcosystemPage() {
               </p>
 
               {/* Blue quote bar */}
-              <div className="mt-[40px] inline-block bg-primary-blue px-[16px] py-[8px]">
-                <p className="text-[16px] font-bold leading-[1] text-white md:text-[20px] xl:text-[24px]">
+              <div className="mt-[56px] inline-block bg-primary-blue px-[11px] py-[3px]">
+                <p className="text-[16px] font-bold leading-[1.4] text-white md:text-[20px] xl:text-[24px]">
                   Strategy stays with us. Execution moves with the ecosystem.
                 </p>
               </div>
@@ -157,16 +160,16 @@ export default function EcosystemPage() {
 
       {/* ── A NETWORK BUILT ON COMPLEMENTARY STRENGTHS ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[95px] pb-[106px] ${containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             A Network Built on
             <br />
             Complementary Strengths
           </h2>
 
-          <div className="mt-[40px] flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+          <div className="mt-[63px] flex flex-col gap-[40px] lg:flex-row lg:gap-[116px]">
             {/* Left — Image */}
-            <div className="relative h-[300px] w-full shrink-0 overflow-hidden rounded-[8px] lg:h-[446px] lg:w-[611px]">
+            <div className="relative h-[300px] w-full shrink-0 overflow-hidden lg:h-[446px] lg:w-[611px]">
               <Image
                 src="/images/ecosystem-network.png"
                 alt="Network connections illustration"
@@ -206,8 +209,8 @@ export default function EcosystemPage() {
 
       {/* ── HOW WE COLLABORATE (Blue bg) ── */}
       <section className="bg-primary-blue">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+        <div className={`mx-auto max-w-[1920px] pt-[83px] pb-[113px] ${containerPx}`}>
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[117px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[464px] lg:shrink-0">
               <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
@@ -245,22 +248,22 @@ export default function EcosystemPage() {
         </div>
       </section>
 
-      {/* ── ORCHESTRATING WITH CLARITY (Blue bg + orchestra image as bg) ── */}
+      {/* ── ORCHESTRATING WITH CLARITY (Dark bg — orchestra image covers blue) ── */}
       <section className="relative overflow-hidden bg-primary-blue">
-        {/* Orchestra image as background */}
+        {/* Orchestra image as full-opacity background — covers the blue */}
         <Image
           src="/images/ecosystem-orchestra.png"
           alt=""
           fill
-          className="object-cover opacity-30"
+          className="object-cover"
           sizes="100vw"
         />
-        <div className={`relative z-10 mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+        <div className={`relative z-10 mx-auto max-w-[1920px] pt-[111px] pb-[102px] ${containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             Orchestrating with Clarity
           </h2>
 
-          <div className="mt-[40px] max-w-[1187px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
+          <div className="mt-[59px] max-w-[1187px] text-[16px] leading-[1.5] text-white xl:text-[20px]">
             <p>
               We guide multidisciplinary teams through shared logic&mdash;ensuring
               execution remains aligned with meaning, positioning, and long-term
@@ -283,19 +286,19 @@ export default function EcosystemPage() {
       </section>
 
       {/* ── WHY AN ECOSYSTEM MATTERS ── */}
-      <section className="bg-gray">
-        <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
+      <section className="bg-white">
+        <div className={`mx-auto max-w-[1920px] pt-[114px] pb-[139px] ${containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Why an Ecosystem Matters
           </h2>
 
-          <div className="mt-[40px] grid grid-cols-1 gap-[16px] md:grid-cols-2 xl:gap-[24px]">
+          <div className="mt-[64px] flex flex-col gap-[33px] md:flex-row">
             {/* Left column */}
-            <div className="flex flex-col gap-[16px]">
+            <div className="flex flex-col gap-[31px] md:w-[708px] md:shrink-0">
               {ecosystemReasonsLeft.map((reason, index) => (
                 <div
                   key={index}
-                  className="border border-dark px-[16px] py-[12px]"
+                  className="border border-dark px-[14px] py-[5px]"
                 >
                   <p className="text-[16px] font-bold leading-[1.3] text-dark xl:text-[24px]">
                     {reason}
@@ -304,11 +307,11 @@ export default function EcosystemPage() {
               ))}
             </div>
             {/* Right column */}
-            <div className="flex flex-col gap-[16px]">
+            <div className="flex flex-1 flex-col gap-[31px]">
               {ecosystemReasonsRight.map((reason, index) => (
                 <div
                   key={index}
-                  className="border border-dark px-[16px] py-[12px]"
+                  className="border border-dark px-[17px] py-[5px]"
                 >
                   <p className="text-[16px] font-bold leading-[1.3] text-dark xl:text-[24px]">
                     {reason}
@@ -320,14 +323,14 @@ export default function EcosystemPage() {
         </div>
       </section>
 
-      {/* ── CLEAR ROLES. CLEAR BOUNDARIES. CLEAR RESULTS. ── */}
+      {/* ── CLEAR ROLES. CLEAR BOUNDARIES. CLEAR RESULTS. (Gray bg zone) ── */}
       <section className="bg-gray">
-        <div className={`mx-auto max-w-[1920px] pb-[80px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] pt-[63px] pb-[53px] ${containerPx}`}>
           <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Clear Roles. Clear Boundaries. Clear Results.
           </h2>
 
-          <div className="mt-[40px] flex flex-col gap-[40px] lg:flex-row lg:gap-[80px]">
+          <div className="mt-[26px] flex flex-col gap-[40px] lg:flex-row lg:gap-[114px]">
             {/* Whitespace roles */}
             <div>
               <h3 className="text-[20px] font-bold leading-[1.3] text-dark">
@@ -352,22 +355,28 @@ export default function EcosystemPage() {
               </ul>
             </div>
 
-            {/* Right — Quote */}
-            <div className="flex-1 lg:text-right">
+            {/* Right — Quote (vertically positioned lower) */}
+            <div className="flex-1 lg:pt-[142px] lg:text-left">
               <p className="text-[20px] font-bold leading-[1.4] text-dark md:text-[24px] xl:text-[32px]">
-                Clarity scales when everyone knows where they stand.
+                Clarity scales when everyone knows
+                <br className="hidden lg:block" />
+                where they stand.
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Dark quote bars */}
-          <div className="mt-[60px] flex flex-col gap-[8px]">
-            <div className="inline-block self-start bg-dark px-[16px] py-[12px]">
+      {/* ── DARK QUOTE BARS (White bg, below gray zone) ── */}
+      <section className="bg-white">
+        <div className={`mx-auto max-w-[1920px] pt-[107px] pb-[103px] ${containerPx}`}>
+          <div className="flex flex-col gap-[8px]">
+            <div className="inline-block self-start bg-dark px-[17px] py-[12px]">
               <p className="text-[20px] font-bold leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
                 We don&apos;t do everything.
               </p>
             </div>
-            <div className="inline-block self-start bg-dark px-[16px] py-[12px]">
+            <div className="inline-block self-start bg-dark px-[17px] py-[12px]">
               <p className="text-[20px] font-bold leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
                 We make everything move in the same direction.
               </p>

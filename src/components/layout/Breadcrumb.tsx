@@ -14,22 +14,24 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
     <nav className="py-[16px]" aria-label="Breadcrumb">
       <ol className="flex items-center gap-[8px] text-[16px]">
         <li>
-          <Link href="/" className="text-dark/60 transition-colors hover:text-primary-blue">
+          <Link href="/" className="text-dark transition-colors hover:text-primary-blue">
             Home
           </Link>
         </li>
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-[8px]">
-            <span className="text-dark/40">/</span>
+            <svg width="5" height="9" viewBox="0 0 5 9" fill="none" className="text-dark" aria-hidden="true">
+              <path d="M0.5 0.5L4.36 4.86L0.5 9.22" stroke="currentColor" strokeWidth="1" />
+            </svg>
             {item.href ? (
               <Link
                 href={item.href}
-                className="text-dark/60 transition-colors hover:text-primary-blue"
+                className="text-dark transition-colors hover:text-primary-blue"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-dark">{item.label}</span>
+              <span className="text-primary-blue">{item.label}</span>
             )}
           </li>
         ))}
