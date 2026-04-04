@@ -183,7 +183,7 @@ export const layout = {
     wide: 243,    // min-[1920px] — exact Figma measurement
   },
   /** Tailwind responsive padding utility */
-  containerPx: "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
+  containerPx: "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]",
 
   /** Navbar */
   navbar: {
@@ -192,14 +192,14 @@ export const layout = {
     /** Outer nav element */
     className: "fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm",
     /** Inner container — use directly, no interpolation needed */
-    innerClassName: "mx-auto flex h-[112px] max-w-[1920px] items-center justify-between px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
+    innerClassName: "mx-auto flex h-[112px] max-w-[1920px] items-center justify-between px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]",
   },
 
   /** Section vertical padding */
   sectionPy: "py-[80px]",
 
   /** Standard section wrapper — max width + padding */
-  sectionContainer: "mx-auto max-w-[1920px] py-[80px] px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]",
+  sectionContainer: "mx-auto max-w-[1920px] py-[80px] px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]",
 
   /** Border radius tokens */
   radius: {

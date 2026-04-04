@@ -115,7 +115,7 @@ export default function EcosystemPage() {
           <div className="mt-[24px] flex flex-col gap-[40px] pb-[63px] lg:flex-row lg:gap-[80px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[507px] lg:shrink-0">
-              <h1 className="text-[28px] font-bold leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
+              <h1 className="text-[28px] leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
                 Clarity works best
                 <br />
                 when it moves through
@@ -138,7 +138,7 @@ export default function EcosystemPage() {
 
               {/* Blue quote bar */}
               <div className="mt-[56px] inline-block bg-primary-blue px-[11px] py-[3px]">
-                <p className="text-[16px] font-bold leading-[1.4] text-white md:text-[20px] xl:text-[24px]">
+                <p className="text-[16px] leading-[1.4] text-white md:text-[20px] xl:text-[24px]">
                   Strategy stays with us. Execution moves with the ecosystem.
                 </p>
               </div>
@@ -161,7 +161,7 @@ export default function EcosystemPage() {
       {/* ── A NETWORK BUILT ON COMPLEMENTARY STRENGTHS ── */}
       <section className="bg-white">
         <div className={`mx-auto max-w-[1920px] pt-[95px] pb-[106px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             A Network Built on
             <br />
             Complementary Strengths
@@ -196,7 +196,7 @@ export default function EcosystemPage() {
                     <h3 className="text-[20px] font-bold leading-[1.3] text-dark">
                       &bull; {cat.title}
                     </h3>
-                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark/80 xl:text-[20px]">
+                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
                       {cat.description}
                     </p>
                   </div>
@@ -213,10 +213,10 @@ export default function EcosystemPage() {
           <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[117px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[464px] lg:shrink-0">
-              <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
+              <h2 className="text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
                 How We Collaborate
               </h2>
-              <p className="mt-[24px] text-[20px] font-bold leading-[1.4] text-white md:text-[24px] xl:text-[32px]">
+              <p className="mt-[24px] text-[20px] leading-[1.4] text-white md:text-[24px] xl:text-[32px]">
                 Our collaboration model is intentionally simple: Whitespace
                 leads the strategy; the ecosystem executes it. Every partner
                 works within their strength&mdash;guided by one direction, one
@@ -235,7 +235,7 @@ export default function EcosystemPage() {
                     {step.lines.map((line, i) => (
                       <p
                         key={i}
-                        className="mt-[4px] text-[16px] leading-[1.5] text-white/80 xl:text-[20px]"
+                        className="mt-[4px] text-[16px] leading-[1.5] text-white xl:text-[20px]"
                       >
                         {line}
                       </p>
@@ -259,7 +259,7 @@ export default function EcosystemPage() {
           sizes="100vw"
         />
         <div className={`relative z-10 mx-auto max-w-[1920px] pt-[111px] pb-[102px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             Orchestrating with Clarity
           </h2>
 
@@ -288,7 +288,7 @@ export default function EcosystemPage() {
       {/* ── WHY AN ECOSYSTEM MATTERS ── */}
       <section className="bg-white">
         <div className={`mx-auto max-w-[1920px] pt-[114px] pb-[139px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Why an Ecosystem Matters
           </h2>
 
@@ -300,7 +300,7 @@ export default function EcosystemPage() {
                   key={index}
                   className="border border-dark px-[14px] py-[5px]"
                 >
-                  <p className="text-[16px] font-bold leading-[1.3] text-dark xl:text-[24px]">
+                  <p className="text-[16px] leading-[1.3] text-dark xl:text-[24px]">
                     {reason}
                   </p>
                 </div>
@@ -313,7 +313,7 @@ export default function EcosystemPage() {
                   key={index}
                   className="border border-dark px-[17px] py-[5px]"
                 >
-                  <p className="text-[16px] font-bold leading-[1.3] text-dark xl:text-[24px]">
+                  <p className="text-[16px] leading-[1.3] text-dark xl:text-[24px]">
                     {reason}
                   </p>
                 </div>
@@ -326,7 +326,7 @@ export default function EcosystemPage() {
       {/* ── CLEAR ROLES. CLEAR BOUNDARIES. CLEAR RESULTS. (Gray bg zone) ── */}
       <section className="bg-gray">
         <div className={`mx-auto max-w-[1920px] pt-[63px] pb-[53px] ${containerPx}`}>
-          <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
+          <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Clear Roles. Clear Boundaries. Clear Results.
           </h2>
 
@@ -357,7 +357,7 @@ export default function EcosystemPage() {
 
             {/* Right — Quote (vertically positioned lower) */}
             <div className="flex-1 lg:pt-[142px] lg:text-left">
-              <p className="text-[20px] font-bold leading-[1.4] text-dark md:text-[24px] xl:text-[32px]">
+              <p className="text-[20px] leading-[1.3] text-dark md:text-[24px] xl:text-[32px]">
                 Clarity scales when everyone knows
                 <br className="hidden lg:block" />
                 where they stand.
@@ -372,12 +372,12 @@ export default function EcosystemPage() {
         <div className={`mx-auto max-w-[1920px] pt-[107px] pb-[103px] ${containerPx}`}>
           <div className="flex flex-col gap-[8px]">
             <div className="inline-block self-start bg-dark px-[17px] py-[12px]">
-              <p className="text-[20px] font-bold leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
+              <p className="text-[20px] leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
                 We don&apos;t do everything.
               </p>
             </div>
             <div className="inline-block self-start bg-dark px-[17px] py-[12px]">
-              <p className="text-[20px] font-bold leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
+              <p className="text-[20px] leading-[1.2] text-white md:text-[24px] xl:text-[34px]">
                 We make everything move in the same direction.
               </p>
             </div>

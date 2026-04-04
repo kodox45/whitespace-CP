@@ -139,3 +139,21 @@
     @apply font-sans;
   }
 }
+
+/* Wide breakpoint — 1920px Figma design width
+   Tailwind v4 doesn't generate arbitrary min-[1920px] from .ts string literals,
+   so we define the utility classes manually as plain CSS. */
+@media (min-width: 1920px) {
+  .wide\:px-\[243px\] { padding-left: 243px; padding-right: 243px; }
+  .wide\:pr-\[60px\] { padding-right: 60px; }
+  .wide\:gap-\[188px\] { gap: 188px; }
+  .wide\:gap-\[254px\] { gap: 254px; }
+  .wide\:gap-\[97px\] { gap: 97px; }
+  .wide\:gap-\[128px\] { gap: 128px; }
+  .wide\:py-\[124px\] { padding-top: 124px; padding-bottom: 124px; }
+  .wide\:py-\[88px\] { padding-top: 88px; padding-bottom: 88px; }
+  .wide\:py-\[100px\] { padding-top: 100px; padding-bottom: 100px; }
+  .wide\:py-\[125px\] { padding-top: 125px; padding-bottom: 125px; }
+  .wide\:py-\[120px\] { padding-top: 120px; padding-bottom: 120px; }
+  .wide\:mt-\[115px\] { margin-top: 115px; }
+}

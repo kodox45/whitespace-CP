@@ -100,7 +100,7 @@ export default function Navbar() {
       </div>
 
       {/* Bottom border — Figma Line 1: x=243→1677, y=111.5, stroke #C8CCCC */}
-      <div className="mx-auto hidden max-w-[1920px] px-[20px] md:px-[40px] lg:px-[60px] xl:block xl:px-[120px] min-[1920px]:px-[243px]">
+      <div className="mx-auto hidden max-w-[1920px] px-[20px] md:px-[40px] lg:px-[60px] xl:block xl:px-[120px] wide:px-[243px]">
         <div className="h-px bg-gray-dark" />
       </div>
 

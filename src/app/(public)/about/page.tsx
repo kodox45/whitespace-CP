@@ -65,7 +65,7 @@ const differentiators = [
 ];
 
 /* ─── Reusable padding utility (matches design-system.ts) ─── */
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]";
+const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]";
 
 /* ─── PAGE ─── */
 
@@ -84,7 +84,7 @@ export default function AboutPage() {
           />
 
           {/* 2-column: heading left, body right */}
-          <div className="mt-[38px] flex flex-col gap-[40px] pb-[65px] lg:flex-row lg:gap-[80px] min-[1920px]:gap-[188px]">
+          <div className="mt-[38px] flex flex-col gap-[40px] pb-[65px] lg:flex-row lg:gap-[80px] wide:gap-[188px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[531px] lg:shrink-0">
               <h1 className="text-[28px] font-normal leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
@@ -136,7 +136,7 @@ export default function AboutPage() {
 
       {/* ── OUR STORY ── */}
       <section className="relative overflow-hidden bg-primary-blue">
-        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[124px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] py-[80px] wide:py-[124px] ${containerPx}`}>
           <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[89px]">
             {/* Left column — Heading + icon */}
             <div className="lg:w-[215px] lg:shrink-0">
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
       {/* ── WHAT DRIVES US ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[88px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] py-[80px] wide:py-[88px] ${containerPx}`}>
           <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             What Drives Us
           </h2>
@@ -267,7 +267,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         {/* Text overlaid on the gray left portion */}
-        <div className={`relative z-10 mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[100px] ${containerPx}`}>
+        <div className={`relative z-10 mx-auto max-w-[1920px] py-[80px] wide:py-[100px] ${containerPx}`}>
           <div className="max-w-[580px]">
             <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
               Clarity that Moves
@@ -284,7 +284,7 @@ export default function AboutPage() {
 
       {/* ── WHAT MAKES US DIFFERENT ── */}
       <section className="bg-dark">
-        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[125px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] py-[80px] wide:py-[125px] ${containerPx}`}>
           <h2 className="text-[28px] font-normal leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             What Makes Us Different
           </h2>
@@ -319,12 +319,12 @@ export default function AboutPage() {
 
       {/* ── LEADERSHIP ── */}
       <section className="bg-white">
-        <div className={`mx-auto max-w-[1920px] py-[80px] min-[1920px]:py-[120px] ${containerPx}`}>
+        <div className={`mx-auto max-w-[1920px] py-[80px] wide:py-[120px] ${containerPx}`}>
           <h2 className="text-[28px] font-normal leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
             Leadership
           </h2>
 
-          <div className="mt-[80px] min-[1920px]:mt-[115px] flex flex-col">
+          <div className="mt-[80px] wide:mt-[115px] flex flex-col">
             {teamMembers.map((member, index) => (
               <div key={member.name}>
                 <div className="flex flex-col gap-[32px] py-[40px] md:flex-row md:gap-[60px] xl:gap-[82px]">

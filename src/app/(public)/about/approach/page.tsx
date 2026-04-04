@@ -78,7 +78,7 @@ export default function OurApproachPage() {
           </div>
 
           {/* 2-column: heading left, body right — 54px below breadcrumb */}
-          <div className="mt-[22px] flex flex-col gap-[40px] pb-[93px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[254px]">
+          <div className="mt-[22px] flex flex-col gap-[40px] pb-[93px] lg:flex-row lg:gap-[40px] xl:gap-[80px] wide:gap-[254px]">
             {/* Left column — Blue heading */}
             <div className="lg:w-[463px] lg:shrink-0">
               <h1 className="text-[28px] font-bold leading-[1.15] text-primary-blue md:text-[36px] xl:text-[48px]">
@@ -131,7 +131,7 @@ export default function OurApproachPage() {
       {/* ── A SYSTEM OF CLARITY ── */}
       <section className="bg-white">
         <div className={`mx-auto max-w-[1920px] pt-[66px] pb-[80px] ${layout.containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[97px]">
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] wide:gap-[97px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[446px] lg:shrink-0">
               <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
@@ -225,7 +225,7 @@ export default function OurApproachPage() {
       {/* ── HOW WE WORK (Gray bg) ── */}
       <section className="bg-gray">
         <div className={`mx-auto max-w-[1920px] pt-[82px] pb-[80px] ${layout.containerPx}`}>
-          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] min-[1920px]:gap-[128px]">
+          <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[40px] xl:gap-[80px] wide:gap-[128px]">
             {/* Left — Heading + subtitle */}
             <div className="lg:w-[415px] lg:shrink-0">
               <h2 className="text-[28px] font-bold leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">

@@ -12,7 +12,7 @@ export default function CTABanner({
   href = "/contact",
 }: CTABannerProps) {
   return (
-    <div className="px-[20px] pb-[80px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]">
+    <div className="px-[20px] pb-[80px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]">
       <Link
         href={href}
         className="group flex w-full flex-col items-center justify-center rounded-[16px] bg-primary-blue px-[20px] py-[40px] text-center transition-colors duration-300 hover:bg-gray-dark md:px-[40px] xl:py-[60px]"

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { footer, exportedAssets } from "@/data/design-system";
 
-const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] min-[1920px]:px-[243px]";
+const containerPx = "px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]";
 
 /* Footer columns from Figma (node 242:738 — Group 13) */
 const col1Links = [

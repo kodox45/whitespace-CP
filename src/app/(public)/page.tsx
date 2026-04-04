@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { layout } from "@/data/design-system";
 import CTABanner from "@/components/layout/CTABanner";
+import PortfolioCard from "@/components/ui/PortfolioCard";
 
 /* ─── DATA ─── */
 
@@ -116,16 +117,6 @@ const selectedWorks = [
 /* ─── Reusable padding utility ─── */
 const containerPx = layout.containerPx;
 
-/* ─── ARROW ICON ─── */
-function ArrowRight({ className = "" }: { className?: string }) {
-  return (
-    <svg width="27" height="22" viewBox="0 0 27 22" fill="none" className={className}>
-      <path d="M0.47 11.16H26.28" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M15.58 0.47L26.28 11.16L15.58 21.86" stroke="currentColor" strokeWidth="1.5" fill="none" />
-    </svg>
-  );
-}
-
 /* ─── PAGE ─── */
 
 export default function HomePage() {
@@ -201,7 +192,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gray">
         <div className="flex min-h-[734px] flex-col lg:flex-row">
           {/* Left: Text content */}
-          <div className={`flex-1 pt-[80px] pb-[80px] xl:pt-[111px] ${containerPx} lg:pr-[60px] min-[1920px]:pr-[60px]`}>
+          <div className={`flex-1 pt-[80px] pb-[80px] xl:pt-[111px] ${containerPx} lg:pr-[60px] wide:pr-[60px]`}>
             <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
               Why Clarity Matters
             </h2>
@@ -328,30 +319,14 @@ export default function HomePage() {
           {/* 2x2 grid of portfolio cards */}
           <div className="mt-[60px] grid grid-cols-1 gap-x-[20px] gap-y-[53px] md:grid-cols-2 xl:gap-x-[22px]">
             {selectedWorks.map((work) => (
-              <Link key={work.slug} href={`/works/${work.slug}`} className="group block">
-                {/* Card image — grayscale by default, color on hover */}
-                <div className="relative aspect-[707/330] overflow-hidden rounded-[16px]">
-                  <Image
-                    src={work.image}
-                    alt={work.title}
-                    fill
-                    className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  {/* Dark overlay — fades on hover */}
-                  <div className="absolute inset-0 bg-dark/40 transition-opacity duration-500 group-hover:opacity-0" />
-                </div>
-                {/* Card text */}
-                <div className="mt-[28px] flex items-end justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-[24px] font-bold leading-[1.3] text-dark transition-colors duration-300 group-hover:text-primary-blue">{work.title}</h3>
-                    <p className="mt-[4px] text-[16px] leading-[1.5] text-dark xl:text-[20px]">
-                      {work.description}
-                    </p>
-                  </div>
-                  <ArrowRight className="mb-[4px] ml-[16px] shrink-0 text-dark transition-colors duration-300 group-hover:text-primary-blue" />
-                </div>
-              </Link>
+              <PortfolioCard
+                key={work.slug}
+                title={work.title}
+                image={work.image}
+                slug={work.slug}
+                description={work.description}
+                variant="featured"
+              />
             ))}
           </div>
 
