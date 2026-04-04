@@ -44,10 +44,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# dev/CI only
+# dev/CI only — Claude Code agent environment (local only, not deployed)
 CLAUDE.md
 AGENTS.md
 IMPLEMENTATION_PLAN.md
+PROGRESS.md
+.claude/
 .mcp.json
 e2e/
 playwright.config.ts
