@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   title: "Whitespace — Brand Strategy & Consulting",
   description:
     "We help companies make better brand decisions through strategic clarity, aligned narratives, and a direction that connects brand and business.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/images/whitespace-mark.svg",
+  },
 };
 
 export default function RootLayout({
