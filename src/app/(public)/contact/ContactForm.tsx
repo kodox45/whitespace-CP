@@ -71,7 +71,7 @@ function FormField({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`mt-[6px] border-b bg-transparent pb-[12px] text-[22px] xl:text-[32px] text-dark placeholder:text-[#b3b3b3] focus:border-primary-blue focus:outline-none transition-colors ${
+        className={`mt-[6px] border-b bg-transparent pb-[12px] text-[22px] xl:text-[32px] text-dark placeholder:text-placeholder focus:border-primary-blue focus:outline-none transition-colors ${
           error ? "border-red-500" : "border-dark"
         }`}
       />
@@ -250,7 +250,7 @@ export default function ContactForm() {
             >
               <span
                 className={`text-[16px] xl:text-[20px] ${
-                  selectedEnquiry ? "text-dark" : "text-[#b3b3b3]"
+                  selectedEnquiry ? "text-dark" : "text-placeholder"
                 }`}
               >
                 {selectedEnquiry?.label || "Select enquiry type"}
@@ -266,7 +266,7 @@ export default function ContactForm() {
               >
                 <path
                   d="M1 0.5L6 5.5L11 0.5"
-                  stroke="#000000"
+                  stroke="currentColor"
                   strokeWidth="1"
                 />
               </svg>
@@ -302,7 +302,7 @@ export default function ContactForm() {
             placeholder="Tell Us More..."
             value={formData.message}
             onChange={(e) => update("message", e.target.value)}
-            className="h-[200px] xl:h-[291px] resize-none border border-dark bg-transparent p-[24px] xl:p-[34px] text-[22px] xl:text-[32px] text-dark placeholder:text-[#b3b3b3] focus:border-primary-blue focus:outline-none transition-colors"
+            className="h-[200px] xl:h-[291px] resize-none border border-dark bg-transparent p-[24px] xl:p-[34px] text-[22px] xl:text-[32px] text-dark placeholder:text-placeholder focus:border-primary-blue focus:outline-none transition-colors"
           />
         </div>
       </div>
@@ -316,7 +316,7 @@ export default function ContactForm() {
             <span
               className={`mt-[2px] flex h-[22px] w-[22px] shrink-0 items-center justify-center border transition-colors ${
                 formData.agreeToTerms
-                  ? "border-primary-blue bg-primary-blue"
+                  ? "border-primary-blue bg-primary-blue text-white"
                   : "border-dark"
               }`}
             >
@@ -329,7 +329,7 @@ export default function ContactForm() {
                 >
                   <path
                     d="M1 5L5 9L13 1"
-                    stroke="#ffffff"
+                    stroke="currentColor"
                     strokeWidth="2"
                   />
                 </svg>
@@ -356,7 +356,7 @@ export default function ContactForm() {
             <span
               className={`mt-[2px] flex h-[22px] w-[22px] shrink-0 items-center justify-center border transition-colors ${
                 formData.subscribeNewsletter
-                  ? "border-primary-blue bg-primary-blue"
+                  ? "border-primary-blue bg-primary-blue text-white"
                   : "border-dark"
               }`}
             >
@@ -369,7 +369,7 @@ export default function ContactForm() {
                 >
                   <path
                     d="M1 5L5 9L13 1"
-                    stroke="#ffffff"
+                    stroke="currentColor"
                     strokeWidth="2"
                   />
                 </svg>

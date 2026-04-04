@@ -170,7 +170,7 @@ export default async function CaseStudyDetailPage({
       {/* ═══ Section 1: Header ═══ */}
       <div className={`mx-auto max-w-[1920px] ${containerPx}`}>
         {/* Separator line — Figma: stroke #c8cccc below navbar */}
-        <div className="h-px bg-[#c8cccc]" />
+        <div className="h-px bg-gray-dark" />
 
         {/* Breadcrumb — Home > Our Perspective > Case Studies > [Client] */}
         <div className="mt-[14px]">
@@ -242,10 +242,10 @@ export default async function CaseStudyDetailPage({
         <svg
           viewBox="0 0 1920 342"
           preserveAspectRatio="none"
-          className="block h-[180px] w-full xl:h-[342px]"
+          className="block h-[180px] w-full text-primary-blue xl:h-[342px]"
           aria-hidden="true"
         >
-          <polygon points="0,342 1920,0 1920,342" fill="#3754ED" />
+          <polygon points="0,342 1920,0 1920,342" fill="currentColor" />
         </svg>
       </div>
 

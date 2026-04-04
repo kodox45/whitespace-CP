@@ -5,7 +5,7 @@
  * All values come from actual Figma node measurements — do NOT guess or approximate.
  *
  * Usage:
- *   import { colors, typography, layout, nav, footer } from "@/data/design-system";
+ *   import { typography, layout, navigation, footer } from "@/data/design-system";
  *
  * When building a new page:
  *   1. Use these tokens for colors, fonts, spacing — no need to re-query Figma.
@@ -22,36 +22,17 @@
 
 /* ════════════════════════════════════════════════════════════
    COLORS
-   Source: Figma fills extracted via get_node
+   All color values are defined as CSS custom properties in globals.css.
+   Tailwind v4 auto-generates utility classes from these:
+     --color-primary-blue  →  bg-primary-blue, text-primary-blue
+     --color-dark          →  bg-dark, text-dark
+     --color-gray          →  bg-gray
+     --color-gray-dark     →  bg-gray-dark, text-gray-dark
+     --color-placeholder   →  text-placeholder, placeholder:text-placeholder
+
+   DO NOT duplicate hex values here. Use Tailwind classes in components.
+   For SVG strokes, use "currentColor" and set the parent's text-* class.
    ════════════════════════════════════════════════════════════ */
-
-export const colors = {
-  /** #3754ED — Logo, CTAs, links, active nav, headings, accent bars, hero heading */
-  primaryBlue: "#3754ED",
-  /** #0D1B6E — Secondary dark-blue accents (rarely used) */
-  darkBlue: "#0D1B6E",
-  /** #141414 — Body text, dark section bgs, footer bg, navbar text, card bgs */
-  dark: "#141414",
-  /** #E9EBEB — Light gray section backgrounds */
-  gray: "#E9EBEB",
-  /** #C8CCCC — Darker gray (Why Clarity Matters right panel, separator lines) */
-  grayDark: "#C8CCCC",
-  /** #FFFFFF — Main page background */
-  white: "#FFFFFF",
-} as const;
-
-/** Tailwind class mappings for each color token */
-export const colorClasses = {
-  primaryBlue: "text-primary-blue",
-  dark: "text-dark",
-  gray: "bg-gray",
-  grayDark: "bg-gray-dark",
-  white: "text-white",
-  bgDark: "bg-dark",
-  bgBlue: "bg-primary-blue",
-  bgGray: "bg-gray",
-  bgWhite: "bg-white",
-} as const;
 
 /* ════════════════════════════════════════════════════════════
    TYPOGRAPHY
@@ -65,7 +46,6 @@ export const typography = {
     fontSize: 100,
     fontWeight: "normal" as const,
     lineHeight: 1.2,
-    color: colors.primaryBlue,
     /** Responsive: 40 → 56 → 72 → 100 */
     responsive: "text-[40px] leading-[1.2] text-primary-blue md:text-[56px] lg:text-[72px] xl:text-[100px]",
   },
@@ -74,7 +54,6 @@ export const typography = {
     fontSize: 48,
     fontWeight: "normal" as const,
     lineHeight: 1.15,
-    color: { light: colors.dark, dark: colors.white },
     /** Responsive: 28 → 36 → 48 */
     responsiveLight: "text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]",
     responsiveDark: "text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]",
@@ -84,7 +63,6 @@ export const typography = {
     fontSize: 32,
     fontWeight: "normal" as const,
     lineHeight: 1.15,
-    color: { blue: colors.primaryBlue, dark: colors.dark, white: colors.white },
     responsiveBlue: "text-[24px] leading-[1.15] text-primary-blue xl:text-[32px]",
     responsiveDark: "text-[24px] leading-[1.15] text-dark xl:text-[32px]",
     responsiveWhite: "text-[24px] leading-[1.15] text-white xl:text-[32px]",
@@ -94,21 +72,18 @@ export const typography = {
     fontSize: 32,
     fontWeight: "normal" as const,
     lineHeight: 1,
-    color: colors.white,
     responsive: "text-[18px] leading-[1] text-white md:text-[24px] xl:text-[32px]",
   },
   /** Framework subtitle / larger descriptive text */
   subtitle: {
     fontSize: 24,
     lineHeight: 1.5,
-    color: colors.white,
     responsive: "text-[18px] leading-[1.5] text-white xl:text-[24px]",
   },
   /** Body text */
   body: {
     fontSize: 20,
     lineHeight: 1.5,
-    color: { dark: colors.dark, white: colors.white, muted: `${colors.white}CC` },
     responsiveDark: "text-[16px] leading-[1.5] text-dark xl:text-[20px]",
     responsiveWhite: "text-[16px] leading-[1.5] text-white xl:text-[20px]",
     responsiveMuted: "text-[16px] leading-[1.5] text-white xl:text-[20px]",
@@ -117,7 +92,6 @@ export const typography = {
   nav: {
     fontSize: 20,
     lineHeight: 1.4,
-    color: colors.dark,
     className: "text-[20px] leading-[1.4] text-dark",
   },
   /** CTA heading */
@@ -125,20 +99,17 @@ export const typography = {
     fontSize: 64,
     fontWeight: "normal" as const,
     lineHeight: 1.1,
-    color: colors.white,
     responsive: "text-[32px] leading-[1.1] text-white md:text-[48px] xl:text-[64px]",
   },
   /** CTA subtitle */
   ctaSubtitle: {
     fontSize: 36,
     lineHeight: 1.4,
-    color: colors.white,
     responsive: "text-[18px] leading-[1.4] text-white md:text-[24px] xl:text-[36px]",
   },
   /** Breadcrumb */
   breadcrumb: {
     fontSize: 16,
-    color: colors.dark,
     className: "text-[16px]",
   },
   /** Card title (Selected Transformations) */
@@ -159,7 +130,6 @@ export const typography = {
   heroDescription: {
     fontSize: 30,
     lineHeight: 1.5,
-    color: colors.white,
     responsive: "text-[18px] leading-[1.5] text-white md:text-[22px] xl:text-[30px]",
   },
 } as const;

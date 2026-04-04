@@ -28,7 +28,7 @@ export default function InsightListingPage() {
       <section className="bg-white pt-[112px]">
         <div className={`mx-auto max-w-[1920px] ${containerPx}`}>
           {/* Separator line — Figma: y:111.5, w:1434, stroke #c8cccc */}
-          <div className="h-px bg-[#c8cccc]" />
+          <div className="h-px bg-gray-dark" />
 
           {/* Breadcrumb — Figma: y:143 (31px below line) */}
           {/* Line bottom at y:112, breadcrumb text at y:143, Breadcrumb has py-[16px] */}

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navigation, layout, exportedAssets, colors } from "@/data/design-system";
+import { navigation, layout, exportedAssets } from "@/data/design-system";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -77,12 +77,12 @@ export default function Navbar() {
           {/* Search Icon */}
           <Link
             href="/search"
-            className="ml-[32px] transition-opacity hover:opacity-70 min-[1440px]:ml-[53px]"
+            className="ml-[32px] text-primary-blue transition-opacity hover:opacity-70 min-[1440px]:ml-[53px]"
             aria-label="Search"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="11" cy="11" r="7" stroke={colors.primaryBlue} strokeWidth="2" />
-              <path d="M16.5 16.5L21 21" stroke={colors.primaryBlue} strokeWidth="2" strokeLinecap="round" />
+              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+              <path d="M16.5 16.5L21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </Link>
         </div>
@@ -128,7 +128,7 @@ export default function Navbar() {
                         width="12" height="12" viewBox="0 0 12 12"
                         className={`transition-transform ${activeDropdown === index ? "rotate-180" : ""}`}
                       >
-                        <path d="M2 4L6 8L10 4" stroke={colors.dark} strokeWidth="2" fill="none" strokeLinecap="round" />
+                        <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
                       </svg>
                     </button>
                   )}
@@ -155,8 +155,8 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke={colors.dark} strokeWidth="2" />
-                <path d="M16.5 16.5L21 21" stroke={colors.dark} strokeWidth="2" strokeLinecap="round" />
+                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+                <path d="M16.5 16.5L21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
               Search
             </Link>

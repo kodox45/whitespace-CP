@@ -77,7 +77,7 @@ function SearchContent() {
               onKeyDown={handleKeyDown}
               placeholder="Type frase or question"
               autoFocus
-              className="w-full bg-transparent text-[24px] text-dark outline-none placeholder:text-[#b3b3b3] md:text-[32px] xl:text-[40px]"
+              className="w-full bg-transparent text-[24px] text-dark outline-none placeholder:text-placeholder md:text-[32px] xl:text-[40px]"
             />
             <button
               onClick={handleSearch}
@@ -117,7 +117,7 @@ function SearchContent() {
                   className="group block"
                 >
                   {/* Title — Figma: fontSize=36, color=#b3b3b3 */}
-                  <h2 className="text-[24px] leading-[1.4] text-[#b3b3b3] transition-colors group-hover:text-primary-blue md:text-[30px] xl:text-[36px]">
+                  <h2 className="text-[24px] leading-[1.4] text-placeholder transition-colors group-hover:text-primary-blue md:text-[30px] xl:text-[36px]">
                     {entry.title}
                   </h2>
 

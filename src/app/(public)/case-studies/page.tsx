@@ -19,7 +19,7 @@ export default function CaseStudiesListingPage() {
     <section className="bg-white pt-[112px] pb-[80px] xl:pb-[129px]">
       <div className={`mx-auto max-w-[1920px] ${containerPx}`}>
         {/* Separator line — Figma: stroke #c8cccc below navbar */}
-        <div className="h-px bg-[#c8cccc]" />
+        <div className="h-px bg-gray-dark" />
 
         {/* Breadcrumb — Home > Our Perspective > Case Studies */}
         {/* Figma: y:143, last item "Case Studies" in blue */}

@@ -52,7 +52,7 @@ export default function FAQAccordion({ items, className = "" }: FAQAccordionProp
                 y1="0"
                 x2="10"
                 y2="20"
-                stroke="#141414"
+                stroke="currentColor"
                 strokeWidth="1.5"
               />
               <line
@@ -60,7 +60,7 @@ export default function FAQAccordion({ items, className = "" }: FAQAccordionProp
                 y1="10"
                 x2="20"
                 y2="10"
-                stroke="#141414"
+                stroke="currentColor"
                 strokeWidth="1.5"
               />
             </svg>

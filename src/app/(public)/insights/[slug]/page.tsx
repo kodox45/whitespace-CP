@@ -42,7 +42,7 @@ export default async function InsightDetailPage({
     <article className="pt-[112px] bg-white">
       {/* ── Separator line ── */}
       <div className="px-[20px] md:px-[40px] lg:px-[60px] xl:px-[120px] wide:px-[243px]">
-        <div className="h-px bg-[#c8cccc]" />
+        <div className="h-px bg-gray-dark" />
       </div>
 
       {/* ── Breadcrumb ── */}
@@ -89,7 +89,7 @@ export default async function InsightDetailPage({
           {/* Left column — Article content */}
           <div className="xl:max-w-[1029px] flex-1 min-w-0">
             {/* Featured Image */}
-            <div className="w-full aspect-[1029/518] bg-[#d9d9d9] relative overflow-hidden">
+            <div className="w-full aspect-[1029/518] bg-placeholder-bg relative overflow-hidden">
               <Image
                 src={insight.image}
                 alt={insight.title}
@@ -115,7 +115,7 @@ export default async function InsightDetailPage({
               <div>
                 <p className="text-[20px] text-dark">Author:</p>
                 <div className="mt-[43px] flex items-center gap-[25px]">
-                  <div className="w-[103px] h-[100px] rounded-full bg-[#d9d9d9] overflow-hidden flex-shrink-0">
+                  <div className="w-[103px] h-[100px] rounded-full bg-placeholder-bg overflow-hidden flex-shrink-0">
                     <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500" />
                   </div>
                   <div>
@@ -320,7 +320,7 @@ function ChevronRight() {
       fill="none"
       className="flex-shrink-0"
     >
-      <path d="M1 1l4 4-4 4" stroke="#141414" strokeWidth="1.5" />
+      <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   );
 }

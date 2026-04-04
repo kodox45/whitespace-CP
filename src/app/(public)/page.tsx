@@ -240,8 +240,7 @@ export default function HomePage() {
       <section className="relative bg-white">
         {/* Blue gradient that rises behind the bottom portion of the cards — matches Figma overlap at y=2859 */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-[260px]"
-          style={{ background: "linear-gradient(to right, #0ca6eb, #345aee)" }}
+          className="absolute bottom-0 left-0 right-0 h-[260px] bg-gradient-blue"
         />
         <div className={`relative z-10 mx-auto max-w-[1920px] pt-[80px] pb-[40px] ${containerPx}`}>
           <h2 className="text-[28px] leading-[1.15] text-dark md:text-[36px] xl:text-[48px]">
@@ -266,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* ── OUR FRAMEWORKS ── */}
-      <section style={{ background: "linear-gradient(to right, #0ca6eb, #345aee)" }}>
+      <section className="bg-gradient-blue">
         <div className={`mx-auto max-w-[1920px] py-[80px] ${containerPx}`}>
           <h2 className="text-[28px] leading-[1.15] text-white md:text-[36px] xl:text-[48px]">
             Our Frameworks
